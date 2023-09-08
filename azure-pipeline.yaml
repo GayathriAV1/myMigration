@@ -6,5 +6,5 @@ pool:
 
 steps:
 - script: |
-    echo "This is a demo yaml pipeline file"
+    echo "This is a demo yaml-pipeline file"
   displayName: "Print Console text for demo"
