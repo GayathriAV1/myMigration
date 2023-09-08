@@ -6,5 +6,5 @@ pool:
 
 steps:
 - script: |
-    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=Azuredevopsavgorg -Dsonar.projectKey=Avgkey -Dsonar.token=be169679df69cc8b732fd6579ef27e2f47403c0c
+    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevopsavgorg -Dsonar.projectKey=avgkey -Dsonar.token=be169679df69cc8b732fd6579ef27e2f47403c0c
   displayName: "Integrate SAST using sonarcloud into ADO Pipeline"
