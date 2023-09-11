@@ -6,11 +6,11 @@ pool:
 
 steps:
 - script: |
-  mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevopsavgorg -Dsonar.projectKey=avgkey -Dsonar.token=be169679df69cc8b732fd6579ef27e2f47403c0c
-  sleep 5
-  sudo apt update
-  sudo apt install curl jq
-  qg_result=$(curl -s -u be169679df69cc8b732fd6579ef27e2f47403c0c: https://sonarcloud.io/api/qualitygates/project_status?projectKey=avgkey | jq -r '.projectStatus.status')
-  echo "Sonar analysis result is $qg_result";
-  if [[ $qg_result == "ERROR" ]] ; then exit 1;fi
-  displayName: "Integrate SAST using sonarcloud with QG into ADO Pipeline "
+    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevopsavgorg -Dsonar.projectKey=avgkey -Dsonar.token=be169679df69cc8b732fd6579ef27e2f47403c0c
+    sleep 5
+    sudo apt update
+    sudo apt install curl jq
+    qg_result=$(curl -s -u be169679df69cc8b732fd6579ef27e2f47403c0c: https://sonarcloud.io/api/qualitygates/project_status?projectKey=avgkey | jq -r '.projectStatus.status')
+    echo "Sonar analysis result is $qg_result";
+    if [[ $qg_result == "ERROR" ]] ; then exit 1;fi
+  displayName: "Integrate SAST using sonarcloud with QG into ADO Pipeline"
