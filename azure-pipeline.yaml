@@ -6,7 +6,7 @@ pool:
 
 steps:
 - script: |
-    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevopsavgorg -Dsonar.projectKey=avgkey -Dsonar.token=be169679df69cc8b732fd6579ef27e2f47403c0c
+  mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevopsavgorg -Dsonar.projectKey=avgkey -Dsonar.token=be169679df69cc8b732fd6579ef27e2f47403c0c
   sleep 5
   sudo apt update
   sudo apt install curl jq
