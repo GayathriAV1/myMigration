@@ -3,6 +3,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+
 variables:
 - group: secretsMyGrp
 - name: accessToken
